@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Creative Workshops</title>
+</head>
+<body>
+    <header>
+        <h1>Ck  Workshops</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to Our Creative Workshops!</h2>
+            <p>Join us to enhance your skills and unleash your creativity. Our workshops cover various topics from painting to digital design.</p>
+            <div class="shop-section">
+                <h3>Featured Workshops</h3>
+                <div class="workshop-item">
+                    <h4>Painting Basics</h4>
+                    <p>Learn the fundamentals of painting with our expert instructors.</p>
+                    
+                </div>
+                <div class="workshop-item">
+                    <h4>Digital Art Creation</h4>
+                    <p>Discover the tools and techniques for creating stunning digital art.</p>
+                </div>
+                <div class="workshop-item">
+                    <h4>Photography Essentials</h4>
+                    <p>Master the art of photography and capture stunning images.</p>
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="validateForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <b> Index No: PKE1060924131</b></p>
+    </footer>
+    <script>function validateForm(event) {
+        event.preventDefault();
+    
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+    
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+        if (!name || !email || !message) {
+            alert("Please fill out all fields.");
+            return;
+        }
+    
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+    
+        alert("Form submitted successfully!");
+        document.getElementById('contactForm').reset();
+    }
+    </script>
+</body>
+</html>
